@@ -3,6 +3,7 @@ package zoo_keeper_part_2;
 public class Bat extends Mammal{
 	
 	public Bat() {
+		super();
 		this.setEnergyLevel(300);
 	}
 	

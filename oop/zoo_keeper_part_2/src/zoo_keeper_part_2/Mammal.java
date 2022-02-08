@@ -1,10 +1,14 @@
 package zoo_keeper_part_2;
 
 public class Mammal {
-	private int energyLevel;
+	protected int energyLevel;
 	
 	public Mammal() {
 		this.energyLevel = 100;
+	}
+	
+	public Mammal(int energyLevel) {
+		this.energyLevel = energyLevel;
 	}
 	
 	public int displayEnergy() {

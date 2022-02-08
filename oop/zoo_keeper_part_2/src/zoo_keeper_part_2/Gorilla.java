@@ -1,12 +1,16 @@
 package zoo_keeper_part_2;
 
 public class Gorilla extends Mammal {
+	
+	public Gorilla() {
+		super();
+	}
 
 	public void throwSomething() {
 		System.out.println("The gorilla threw something...");
-		this.setEnergyLevel(getEnergyLevel()-5);
+		this.energyLevel -= 5;
 	}
-	
+
 	public void eatBananas() {
 		System.out.println("The gorilla enjoyed eating the bananas you gave it.");
 		this.setEnergyLevel(getEnergyLevel()+10);
