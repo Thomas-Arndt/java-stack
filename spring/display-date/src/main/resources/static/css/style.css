@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.date{
+	width: fit-content;
+	margin: 30px auto;
+	color: blue;
+}
+
+.time{
+	width: fit-content;
+	margin: 30px auto;
+	color: green;
+}
