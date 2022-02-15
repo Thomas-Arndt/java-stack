@@ -27,8 +27,8 @@ public class MainController {
 			session.setAttribute("gold", 0);
 		}
 		
-		model.addAttribute("gold", session.getAttribute("gold"));
-		model.addAttribute("activity", session.getAttribute("activity"));
+//		model.addAttribute("gold", session.getAttribute("gold"));
+//		model.addAttribute("activity", session.getAttribute("activity"));
 		
 		return bankrupt ? "debtPrison.jsp" : "index.jsp";
 	}
