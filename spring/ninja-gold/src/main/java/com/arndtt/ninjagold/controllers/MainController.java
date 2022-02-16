@@ -39,7 +39,7 @@ public class MainController {
 			@RequestParam(value="propertyType") String propertyType) {
 		System.out.println(propertyType);
 		if(propertyType.equals("farm")) {
-			Integer newGold = randomGenerator.nextInt(10,21);
+			Integer newGold = randomGenerator.nextInt(11)+10;
 			Integer gold = (Integer) session.getAttribute("gold")+ newGold;
 			session.setAttribute("gold", gold);
 			ArrayList<String> activity = (ArrayList<String>) session.getAttribute("activity");
@@ -47,7 +47,7 @@ public class MainController {
 			session.setAttribute("activity", activity);
 		}
 		if(propertyType.equals("cave")) {
-			Integer newGold = randomGenerator.nextInt(5,11);
+			Integer newGold = randomGenerator.nextInt(6)+5;
 			Integer gold = (Integer) session.getAttribute("gold")+ newGold;
 			session.setAttribute("gold", gold);
 			ArrayList<String> activity = (ArrayList<String>) session.getAttribute("activity");
@@ -55,7 +55,7 @@ public class MainController {
 			session.setAttribute("activity", activity);
 		}
 		if(propertyType.equals("house")) {
-			Integer newGold = randomGenerator.nextInt(2,6);
+			Integer newGold = randomGenerator.nextInt(5)+2;
 			Integer gold = (Integer) session.getAttribute("gold")+ newGold;
 			session.setAttribute("gold", gold);
 			ArrayList<String> activity = (ArrayList<String>) session.getAttribute("activity");
@@ -64,7 +64,10 @@ public class MainController {
 		}
 		if(propertyType.equals("casino")) {
 			String changeSign;
-			Integer newGold = randomGenerator.nextInt(-50,51);
+			Integer newGold = randomGenerator.nextInt(50)+1;
+			if(randomGenerator.nextBoolean()){
+				newGold = newGold*-1;
+			}
 			Integer gold = (Integer) session.getAttribute("gold")+ newGold;
 			session.setAttribute("gold", gold);
 			ArrayList<String> activity = (ArrayList<String>) session.getAttribute("activity");
@@ -77,7 +80,7 @@ public class MainController {
 			session.setAttribute("activity", activity);
 		}
 		if(propertyType.equals("spa")) {
-			Integer newGold = randomGenerator.nextInt(5,21);
+			Integer newGold = randomGenerator.nextInt(16)+5;
 			Integer gold = (Integer) session.getAttribute("gold")- newGold;
 			session.setAttribute("gold", gold);
 			ArrayList<String> activity = (ArrayList<String>) session.getAttribute("activity");
