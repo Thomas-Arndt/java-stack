@@ -18,9 +18,9 @@
 		<a href="/dashboard" class="btn btn-primary">Dashboard</a>
 	</div>
 	<div class="d-flex flex-column align-items-center mt-3 gap-3">
-		<h5>Title: <c:out value="${song.title }" /></h5>
-		<h5>Artist: <c:out value="${song.artist }" /></h5>
-		<h5>Rating: <c:out value="${song.rating }" /></h5>
+		<h5>Title: ${song.title }</h5>
+		<h5>Artist: ${song.artist }</h5>
+		<h5>Rating: ${song.rating }</h5>
 		<div class="d-flex justify-content-center gap-2">
 			<a href="/songs/edit/${song.id }" class="btn btn-success">Edit</a>
 			<form action="/songs/delete/${song.id }" method="post">

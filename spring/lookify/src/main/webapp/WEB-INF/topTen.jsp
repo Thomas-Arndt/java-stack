@@ -25,9 +25,9 @@
 		<tbody>
 			<c:forEach var="song" items="${topTen }">
 				<tr>
-					<td><c:out value="${song.rating }"></c:out></td>
-					<td><a href="/songs/${song.id }"><c:out value="${song.title }"></c:out></a></td>
-					<td><c:out value="${song.artist }"></c:out></td>
+					<td>${song.rating }</td>
+					<td><a href="/songs/${song.id }">${song.title }</a></td>
+					<td>${song.artist }</td>
 				</tr>
 			</c:forEach>	
 		</tbody>

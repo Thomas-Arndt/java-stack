@@ -29,7 +29,7 @@
 		<tbody>
 			<c:forEach var="song" items="${songsByArtist }">
 				<tr>
-					<td><c:out value="${song.title }"></c:out></td>
+					<td><a href="/songs/${song.id}"><c:out value="${song.title }"></c:out></a></td>
 					<td><c:out value="${song.rating }"></c:out></td>
 					<td class="d-flex justify-content-center gap-2">
 					<a href="/songs/edit/${song.id }" class="btn btn-success py-0 px-1">Edit</a>

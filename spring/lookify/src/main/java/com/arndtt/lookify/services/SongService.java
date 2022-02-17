@@ -49,7 +49,7 @@ public class SongService {
 	}
 	
 	public List<Song> topCharts() {
-		return songRepository.findAllByOrderByRatingDesc();
+		return songRepository.findTop10ByOrderByRatingDesc();
 	}
 	
 }

@@ -1,9 +1,11 @@
 package com.arndtt.lookify.controllers;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.validation.Valid;
+
+import com.arndtt.lookify.models.Song;
+import com.arndtt.lookify.services.SongService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,9 +18,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import com.arndtt.lookify.models.Song;
-import com.arndtt.lookify.services.SongService;
 
 @Controller
 public class SongController {
@@ -102,17 +101,7 @@ public class SongController {
 	@GetMapping("/search/topTen")
 	public String topTen(Model model) {
 		List<Song> topCharts = songService.topCharts();
-		ArrayList<Song> topTen = new ArrayList<Song>();
-		if(topCharts.size() > 10) {
-			for(int i = 0; i < 10; i++) {
-				topTen.add(topCharts.get(i));
-			}
-		} else {
-			for(int i = 0; i < topCharts.size(); i++) {
-				topTen.add(topCharts.get(i));
-			}
-		}
-		model.addAttribute("topTen", topTen);
+		model.addAttribute("topTen", topCharts);
 		return "topTen.jsp";
 	}
 
