@@ -90,13 +90,21 @@ public class SongController {
 		return "redirect:/search/"+searchQuery;
 	}
 	
-	@GetMapping("/search/{searchQuery}")
-	public String artistSearch(@PathVariable("searchQuery") String searchQuery,
+	@GetMapping("/search")
+	public String artistSearch(@RequestParam("searchQuery") String searchQuery,
 			Model model) {
 		List<Song> songsByArtist = songService.songsByArtist(searchQuery);
 		model.addAttribute("songsByArtist", songsByArtist);
 		return "artistSearch.jsp";
 	}
+	
+	// @GetMapping("/search/{searchQuery}")
+	// public String artistSearch(@PathVariable("searchQuery") String searchQuery,
+	// 		Model model) {
+	// 	List<Song> songsByArtist = songService.songsByArtist(searchQuery);
+	// 	model.addAttribute("songsByArtist", songsByArtist);
+	// 	return "artistSearch.jsp";
+	// }
 	
 	@GetMapping("/search/topTen")
 	public String topTen(Model model) {

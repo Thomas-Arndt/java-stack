@@ -13,7 +13,7 @@
 	<div class="d-flex justify-content-between align-items-center border-bottom px-3 mt-2">
 		<h1>Lookify</h1>
 		<a href="/search/topTen" class="btn btn-primary text-nowrap">Top Ten</a>
-		<form action="/search" method="post" class="d-flex align-items-center gap-1">
+		<form action="/search" method="get" class="d-flex align-items-center gap-1">
 			<input type="text" name="searchQuery" placeholder="Search" class="form-control" />
 			<input type="submit" value="Search Artists" class="btn btn-primary" />
 		</form>
