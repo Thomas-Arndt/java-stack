@@ -17,6 +17,7 @@ public class UserService {
     @Autowired
     private UserRepository userRepo;
 
+    // Returns a single user from the database if it is present
     public User oneUser(Long id) {
         Optional<User> potentialUser = userRepo.findById(id);
         if(potentialUser.isPresent()) {

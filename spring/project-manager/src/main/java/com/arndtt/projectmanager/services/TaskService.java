@@ -12,6 +12,7 @@ public class TaskService {
     @Autowired
     private TaskRepository taskRepo;
 
+    // Saves a task to the database
     public Task saveTask(Task task) {
         return taskRepo.save(task);
     }
